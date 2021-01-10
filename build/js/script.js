@@ -154,11 +154,13 @@ if (animItems.length > 0) {
 // }
 
 
-const anchors = document.querySelectorAll('.menu__link[href*="#"]')
+const anchors = document.querySelectorAll('.menu__link[href*="#"]');
+
+
 
 for (let anchor of anchors) {
 	anchor.addEventListener('click', function (e) {
-		e.preventDefault()
+		e.preventDefault();
 
 		const blockID = anchor.getAttribute('href').substr(1)
 
@@ -166,21 +168,43 @@ for (let anchor of anchors) {
 			behavior: 'smooth',
 			block: 'start'
 		})
-	})
+	});
 }
+const hire = document.querySelector('.hire');
+const hire2 = document.querySelector('.hire2');
+const portfolio = document.querySelector('.portf');
 
-// $(document).ready(function () {
-// 	$('a.menu__link').click(function () {
-// 		$('html, body').animate({
-// 			scrollTop: $($(this).attr("href")).offset().top + "px"
-// 		}, {
-// 			duration: 1000,
-// 			easing: "swing"
 
-// 		});
-// 		return false;
-// 	});
-// })
+hire.addEventListener('click', function (e) {
+	console.log("clock");
+	e.preventDefault()
+	// const hireBlock = document.querySelector('#contacts');
+	document.getElementById('contacts').scrollIntoView({
+		behavior: 'smooth',
+		block: 'start'
+	})
+
+});
+hire2.addEventListener('click', function (e) {
+	console.log("clock");
+	e.preventDefault()
+	// const hireBlock = document.querySelector('#contacts');
+	document.getElementById('contacts').scrollIntoView({
+		behavior: 'smooth',
+		block: 'start'
+	})
+
+});
+portfolio.addEventListener('click', function (e) {
+	console.log("clock");
+	e.preventDefault()
+	// const hireBlock = document.querySelector('#contacts');
+	document.getElementById('portfolio').scrollIntoView({
+		behavior: 'smooth',
+		block: 'start'
+	})
+
+});
 
 AOS.init();
 AOS.refresh();;
@@ -216,19 +240,11 @@ $(document).ready(function () {
 
 
 	$('.theme__switcher').click(function () {
-		let new_theme = $('.theme__switcher, .section__title,.icon__menu, .portfolio__body, .accordion, .container__main, h1, span, .switcher, body, .section,p, header, .menu__link, h2, .menu__list>li')
+		let new_theme = $('.theme__switcher, .section__title,.icon__menu, .portfolio__body, .accordion, .container__main, h1, span, .switcher, body, .section,p, header, .menu__link, h2, .menu__list>li, .item__footer, .section__faq')
 
 		new_theme.toggleClass('active');
 		let _theme = new_theme.hasClass('active');
-		// var isShow = !!parseInt(localStorage.getItem('isShow'));
-		// $(new_theme)[parseInt(localStorage.isShow) ? 'removeClass' : 'addClass']("active");
 
-
-		// let cookie = Cookies.set("theme", _theme);
-		// Cookies.set("theme1", _theme, {
-		// 	path: "/",
-		// 	expires: 365
-		// });
 
 
 
