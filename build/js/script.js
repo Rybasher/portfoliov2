@@ -7,8 +7,17 @@ function ibg() {
 		}
 	});
 }
+ibg();
+let mask = document.querySelector('.mask');
 
-ibg();;
+window.addEventListener('load', function () {
+	mask.classList.add('hide');
+	setTimeout(() => {
+		mask.remove();
+	}, 1200)
+});
+
+
 $(".icon__menu").click(function () {
 	// $(this).toggleClass("active");
 	$(this).toggleClass("rotate");
@@ -298,5 +307,4 @@ testWebP(function (support) {
 		document.querySelector('body').classList.add('no-webp');
 	}
 });
-
 
